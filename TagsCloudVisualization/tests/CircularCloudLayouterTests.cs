@@ -26,7 +26,7 @@ namespace TagCloudTests
         {
             if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
             {
-                VisualizationPrinter.PrintVisualization(TestContext.CurrentContext.Test.Name, layouter.Rectangles, center);
+                VisualizationPrinter.Print(TestContext.CurrentContext.Test.Name, layouter.Rectangles, center);
             }
         }
 
