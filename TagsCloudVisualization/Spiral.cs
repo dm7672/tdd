@@ -23,7 +23,11 @@ namespace TagCloud
 
         public Point GetNextPoint()
         {
-
+            double radius = radiusStep * angle;
+            var x = center.X + radius * Math.Cos(angle);
+            var y = center.Y + radius * Math.Sin(angle);
+            angle += angleStep;
+            return new Point((int)Math.Round(x), (int)Math.Round(y));
         }
 
 
